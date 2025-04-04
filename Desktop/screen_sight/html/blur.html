@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blurry Screen - Screen Sight</title>
+    <link rel="stylesheet" href="../css/blur.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-container">
+            <img src="../images/logo.png" alt="Screen Sight Logo">
+            <span>Screen Sight</span>
+        </div>
+        <ul>
+            <li><a href="about.html">Home</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="team.html">Meet the Team</a></li>
+            <li><a href="demo.html">Demo</a></li>
+            <li><a href="future.html">Future</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Blurry Screen Content -->
+    <section class="blurry-content">
+        <h1>Blurry Screen Demo</h1>
+        <p>This text and video will be revealed after clicking "Go!"</p>
+        
+        <!-- Video Container -->
+        <div class="video-container">
+            <video id="demoVideo" controls>
+                <source src="../videos/demo1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Blurry Overlay -->
+    <div class="blur-overlay" id="blurEffect">
+        <button class="go-button" onclick="removeBlur()">Go!</button>
+    </div>
+
+    <script src="../js/blur.js"></script>
+
+</body>
+</html>

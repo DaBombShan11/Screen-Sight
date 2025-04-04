@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #e6f7ff; /* Light blue background */
+    color: #333; /* Darker text for better readability */
+    padding-top: 80px; /* Increased padding to avoid navbar overlap */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #3399ff; /* Light blue navbar */
+    padding: 20px 20px; /* Adjusted padding to ensure no text is cut off */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding does not affect the layout */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-container span {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Content Section */
+.blurry-content {
+    margin-top: 100px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Video Container */
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Blurry Overlay */
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: backdrop-filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* When hidden */
+.hidden {
+    backdrop-filter: blur(0px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Go Button */
+.go-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #6200ea;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.go-button:hover {
+    background-color: #4b00b5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 30px;
+    }
+
+    .blurry-content {
+        margin-top: 80px;
+    }
+
+    video {
+        max-width: 100%;
+    }
+}
