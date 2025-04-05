@@ -1,0 +1,179 @@
+/* practice.css */
+
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #e6f7ff; /* Light blue background */
+    color: #333; /* Darker text for better readability */
+    padding-top: 80px; /* Increased padding to avoid navbar overlap */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #3399ff; /* Light blue navbar */
+    padding: 20px 20px; /* Adjusted padding to ensure no text is cut off */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding does not affect the layout */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-container span {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Blurred Content Section */
+.blurred-content {
+    text-align: center;
+    margin-top: 100px; /* Adjusted space to avoid overlap with navbar */
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0044cc;
+}
+
+.description {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* Image and Button Container */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.blurred-image {
+    max-width: 80%;
+    height: auto;
+    border: 3px solid #0044cc;
+}
+
+.demo-button {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateX(20px) translateY(-50%);
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.demo-button:hover {
+    background-color: #0033a0;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.popup-content h2 {
+    font-size: 24px;
+    color: #0044cc;
+}
+
+.popup-content label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+.popup-content input {
+    font-size: 16px;
+    padding: 8px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.popup-content button {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.popup-content button:hover {
+    background-color: #0033a0;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
