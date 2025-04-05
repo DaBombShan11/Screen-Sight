@@ -11,7 +11,7 @@ body {
 /* Navigation Bar */
 nav {
     background-color: #3399ff; /* Light blue navbar */
-    padding: 20px 20px; /* Adjusted padding to ensure no text is cut off */
+    padding: 15px 20px; /* Reduced padding to make the navbar more consistent */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,6 +20,7 @@ nav {
     top: 0;
     z-index: 1000;
     box-sizing: border-box; /* Ensure padding does not affect the layout */
+    height: 70px; /* Explicitly set height for consistency */
 }
 
 /* Logo inside navbar */
@@ -29,13 +30,13 @@ nav {
 }
 
 .nav-logo {
-    height: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust logo size */
     margin-right: 10px;
 }
 
 .nav-title {
     color: white;
-    font-size: 24px;
+    font-size: 24px; /* Adjust font size to match the intended size */
     font-weight: bold;
 }
 
@@ -48,13 +49,13 @@ ul {
 }
 
 ul li {
-    margin: 0 20px;
+    margin: 0 15px; /* Slightly reduced margin for a more compact navbar */
 }
 
 ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 16px; /* Consistent font size */
     font-weight: bold;
 }
 
@@ -62,6 +63,7 @@ ul li a:hover {
     text-decoration: underline;
     color: #ffcc00; /* Change the color on hover to a gold/yellow */
 }
+
 
 /* Hero section container */
 .hero {
@@ -72,6 +74,7 @@ ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Center both vertically and horizontally */
 }
 
 .hero img {
@@ -98,6 +101,7 @@ ul li a:hover {
     bottom: 20%; /* Adjust as needed */
     width: 100%;
 }
+
 /* Testimonial Slider */
 .testimonial-slider {
     overflow: hidden;

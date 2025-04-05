@@ -1,21 +1,18 @@
+/* Body */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f0f8ff;
-    color: #333;
-    padding-top: 80px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    background-color: #e6f7ff; /* Light blue background */
+    color: #333; /* Darker text for better readability */
+    padding-top: 80px; /* Increased padding to avoid navbar overlap */
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #3399ff;
-    padding: 20px 40px;
+    background-color: #3399ff; /* Light blue navbar */
+    padding: 20px 20px; /* Adjusted padding to ensure no text is cut off */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +20,7 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding does not affect the layout */
 }
 
 .logo-container {
@@ -32,13 +29,13 @@ nav {
 }
 
 .logo-container img {
-    height: 50px;
-    margin-right: 15px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .logo-container span {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -50,15 +47,14 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 nav ul li a:hover {
@@ -94,7 +90,41 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
-/* Header and QR Code Section (Side by side) */
+/* Progress Bar */
+.donation-header .progress-container {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.donation-header .progress-bar {
+    width: 80%;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px auto;
+    position: relative;
+}
+
+.donation-header .progress {
+    height: 100%;
+    width: 8.2%; /* Update based on your fundraising progress */
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    transition: width 1s ease-in-out;
+}
+
+.donation-header .goal-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Main Content Section */
 .donation-main-content {
     display: flex;
     justify-content: space-between;
@@ -124,41 +154,7 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
-/* Progress Bar inside Donation Header */
-.donation-header .progress-container {
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-}
-
-.donation-header .progress-bar {
-    width: 80%;
-    height: 30px;
-    background-color: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 10px auto;
-    position: relative;
-}
-
-.donation-header .progress {
-    height: 100%;
-    width: 8.2%; /* Calculated as (20,500 / 250,000) * 100 */
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    line-height: 30px;
-    font-weight: bold;
-    transition: width 1s ease-in-out;
-}
-
-.donation-header .goal-text {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Description Section (Side by side with image) */
+/* Donation Description Section */
 .donation-description {
     display: flex;
     max-width: 900px;
@@ -201,17 +197,6 @@ nav ul li a:hover {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-}
-
-/* Donation Section */
-.donation-container {
-    padding: 50px 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    max-width: 900px;
-    margin: auto;
-    margin-top: 40px;
 }
 
 /* Donate Button */

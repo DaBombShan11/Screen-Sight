@@ -1,0 +1,158 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #e6f7ff; /* Light blue background */
+    color: #333; /* Darker text for better readability */
+    padding-top: 80px; /* Increased padding to avoid navbar overlap */
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #3399ff; /* Light blue navbar */
+    padding: 20px 20px; /* Adjusted padding to ensure no text is cut off */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding does not affect the layout */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo-container span {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Form */
+  .contact-container {
+    margin-top: 100px; /* Adjusted space to avoid overlap with navbar */
+    padding: 20px;
+  }
+  
+  .contact-container h1 {
+    font-size: 36px;
+    color: #0044cc;
+    margin-bottom: 10px;
+  }
+  
+  .contact-container p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .contact-form button {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0033a0;
+  }
+  
+  /* Popup Styles */
+  .popup {
+    display: none; /* Hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of other content */
+  }
+  
+  .popup-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: #0044cc;
+    width: 300px;
+  }
+  
+  .popup-content p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Close Button (X) */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .close-btn:hover {
+    color: #0044cc;
+  }
+  
