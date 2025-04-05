@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #e6f7ff; /* Light blue background */
+    color: #333; /* Darker text for better readability */
+    padding-top: 80px; /* Increased padding to avoid navbar overlap */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #3399ff; /* Light blue navbar */
+    padding: 15px 20px; /* Reduced padding to make the navbar more consistent */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding does not affect the layout */
+    height: 70px; /* Explicitly set height for consistency */
+}
+
+/* Logo inside navbar */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 40px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+.nav-title {
+    color: white;
+    font-size: 24px; /* Adjust font size to match the intended size */
+    font-weight: bold;
+}
+
+/* Navigation links styling */
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 0 15px; /* Slightly reduced margin for a more compact navbar */
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Consistent font size */
+    font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* Change the color on hover to a gold/yellow */
+}
+
+/* Hero section container */
+.hero {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center everything */
+    justify-content: flex-start; /* Align items to the top */
+    width: 100%;
+    margin-top: 80px; /* Adjust for the fixed navbar */
+    padding: 20px; /* Padding to give space around content */
+}
+
+/* Text on top of hero section */
+.top-text {
+    color: #3399ff; /* Blue text */
+    font-size: 3rem; /* Large text */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px; /* Add space between text and other content */
+}
+
+/* Hero content: Image and Video */
+.hero-content {
+    display: flex;
+    justify-content: space-between; /* Align the image and video side by side */
+    width: 100%;
+    max-width: 1200px; /* Limit the maximum width for larger screens */
+    gap: 20px; /* Space between the image and the video */
+}
+
+.hero img {
+    width: 45%; /* Adjust this value to make the image smaller */
+    height: auto; /* Maintain the image's aspect ratio */
+}
+
+.hero-video {
+    width: 45%; /* Adjust video size */
+    height: auto; /* Ensure the video keeps the correct aspect ratio */
+}
+
+
+/* Testimonial Slider */
+.testimonial-slider {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    background: #f4f4f4; /* Light background for contrast */
+    padding: 20px 0;
+}
+
+/* Continuous scrolling container */
+.testimonial-container {
+    display: flex;
+    gap: 20px; /* Space between boxes */
+    width: calc(250px * 4); /* Adjusted to fit all testimonial boxes */
+    animation: slide 20s linear infinite; /* Continuous sliding */
+}
+
+/* Individual testimonial box */
+.testimonial-box {
+    flex: 0 0 250px; /* Set width for each box */
+    height: 250px; /* Make them more square */
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Alternating background colors */
+.testimonial-box:nth-of-type(3n+1) { background-color: #3399ff; } /* Red */
+.testimonial-box:nth-of-type(3n+2) { background-color: #2980b9; } /* Blue */
+.testimonial-box:nth-of-type(3n+3) { background-color: #1c5980; } /* Green */
+
+/* Author styling */
+.author {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Continuous sliding animation */
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
