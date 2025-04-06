@@ -1,0 +1,208 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #e6f7ff; /* Light blue background */
+    color: #333; /* Darker text for better readability */
+    padding-top: 80px; /* Increased padding to avoid navbar overlap */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #3399ff; /* Light blue navbar */
+    padding: 20px 40px; /* Adjusted padding for spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding does not affect the layout */
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-left .nav-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Page Header */
+header {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Timeline Section */
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+/* Event Box Styling */
+.timeline-event {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #80c0ff; /* Light blue background for events */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.timeline-event:hover {
+    background-color: #66b3ff; /* Slightly darker blue when hovered */
+    transform: translateY(-5px);
+}
+
+.event-image {
+    max-height: 150px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Event Date Styling */
+.timeline-date {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #00796b;
+}
+
+/* Hover Detail Box Styling */
+.hover-box {
+    display: none;
+    position: absolute;
+    background-color: #3399ff;
+    color: white;
+    border-radius: 12px;
+    padding: 30px;
+    z-index: 100;
+    width: 500px;
+    height: 400px; /* Set a fixed height to accommodate video */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    left: 50%;
+    top: 70%; /* Adjusted to center vertically */
+    transform: translate(-50%, -50%); /* Center the box horizontally and vertically */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    overflow: hidden; /* Ensure content doesn't overflow the box */
+}
+
+.hover-box.active {
+    display: block;
+}
+
+.hover-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure content is centered vertically */
+}
+
+.hover-content img, .hover-content video {
+    width: 100%;
+    height: 200px; /* Set a fixed height for image and video */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.hover-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #66b3ff;
+}
+
+.hover-content p {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15px; /* Add padding to avoid text touching edges */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-event {
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .hover-box {
+        width: 90%;
+        padding: 20px;
+        top: 220px; /* Adjust the position for mobile */
+        height: auto; /* Let the height adjust based on content */
+    }
+
+    .hover-content img, .hover-content video {
+        height: 150px; /* Adjust video height for smaller screens */
+    }
+}
